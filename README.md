@@ -1,7 +1,7 @@
-Project Title: Plan-t a Pomodoro
-Author: Binh Vo 
-Project Advisor: Takunari Miyazaki
-CPSC 403 Seminar Advisor: Ewa Syta
+## Project Title: Plan-t a Pomodoro (2018-2019)
+### Author: Binh Vo 
+### Project Advisor: Takunari Miyazaki
+### CPSC 403 Seminar Advisor: Ewa Syta
 
 Plan-t a Pomodoro is an app that builds off the Pomodoro method’s philosophy. The objective is to achieve more with less, but also move through tasks quickly and consistently. The reduced complexity lets users focus solely on their efforts in their activities. 
 
