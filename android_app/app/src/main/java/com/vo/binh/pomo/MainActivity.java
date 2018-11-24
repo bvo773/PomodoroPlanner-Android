@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Views
-        mTimerButton = findViewById(R.id.btn_timer);
-        mPlannerButton = findViewById(R.id.btn_planner);
-        mStatisticsButoon = findViewById(R.id.btn_statistics);
+        mTimerButton = findViewById(R.id.timerB);
+        mPlannerButton = findViewById(R.id.plannerB);
+        mStatisticsButoon = findViewById(R.id.statisticsB);
     }
 }
