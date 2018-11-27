@@ -19,5 +19,10 @@ public class MainActivity extends AppCompatActivity {
         mTimerButton = findViewById(R.id.timerB);
         mPlannerButton = findViewById(R.id.plannerB);
         mStatisticsButoon = findViewById(R.id.statisticsB);
+        startTimer();
+    }
+
+    public void startTimer() {
+        Timer time = new Timer(15000);
     }
 }
