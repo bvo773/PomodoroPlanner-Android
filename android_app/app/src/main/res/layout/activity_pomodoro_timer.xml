@@ -29,15 +29,15 @@
         android:id="@+id/startPauseB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/btn_start_pause"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerT"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintVertical_bias="0.503" />
 
     <Button
         android:id="@+id/stopB"
