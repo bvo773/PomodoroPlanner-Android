@@ -15,20 +15,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
 
-        // Views
-        mTimerButton = findViewById(R.id.timerB);
-        mPlannerButton = findViewById(R.id.plannerB);
-        mStatisticsButoon = findViewById(R.id.statisticsB);
-        mTimerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent timerActivity = new Intent(MainActivity.this, PomodoroTimer.class);
-                startActivity(timerActivity);
-            }
-        });
+
     }
-
-
 }
