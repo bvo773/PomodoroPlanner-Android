@@ -5,11 +5,20 @@
     <string name="btn_timer_name">Pomodoro Timer</string>
     <string name="btn_planner_name">Plan!</string>
     <string name="btn_statistics_name">Look at Statistics!</string>
-    <string name="title_activity_pomodoro_timer">PomodoroTimer</string>
+    <string name="str_menu_pomodoro_timer">Pomodoro Timer</string>
+    <string name="str_menu_pomodoro_planner">Pomodoro Planner</string>
+    <string name="str_menu_statistics">Statistics</string>
+    <string name="str_menu_connect_spotify">Connect to Spotify</string>
+
 
     <!--Pomodoro Activity -->
     <string name="btn_start_pause">Start/Pause</string>
     <string name="btn_stop">Stop</string>
+
+    <!--Sign Up Fragment Activity Values-->
+    <string name="str_name">Name</string>
+    <string name="str_email">Email</string>
+
 </resources>
 
 
