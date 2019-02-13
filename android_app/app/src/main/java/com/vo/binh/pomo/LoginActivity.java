@@ -1,7 +1,6 @@
 package com.vo.binh.pomo;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,12 +42,12 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment fragment = fragmentManager.findFragmentById()
+       // Fragment fragment = fragmentManager.findFragmentById(R.id.);
 
     }
 
     public void LogIn() {
-        Intent menuActivity = new Intent(this, MainActivity.class);
+        Intent menuActivity = new Intent(this, MenuActivity.class);
         startActivity(menuActivity);
     }
 }

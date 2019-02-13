@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/menu_red"
-    tools:context=".MainActivity">
+    tools:context=".MenuActivity">
 
 
     <LinearLayout
@@ -13,21 +13,79 @@
         android:layout_width="match_parent"
         android:layout_height="173dp"
         android:layout_margin="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@color/menu_red"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="5dp"
-            android:contentDescription="lolO"
-            android:padding="5dp"
-            android:src="@color/cardview_dark_background"
-            />
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            tools:layout_conversion_absoluteHeight="173dp"
+            tools:layout_conversion_absoluteWidth="392dp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="30sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="41dp"
+                    tools:layout_conversion_absoluteWidth="392dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/quote_1"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/text_date"
+                    app:layout_constraintStart_toStartOf="@+id/text_date"
+                    app:layout_constraintTop_toBottomOf="@+id/text_date"
+                    tools:layout_conversion_absoluteHeight="90dp"
+                    tools:layout_conversion_absoluteWidth="392dp" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
     <android.support.v7.widget.CardView
@@ -133,9 +191,9 @@
             android:id="@+id/image_view_statistics"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
             android:layout_marginBottom="10dp"
             android:padding="2dp"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/ic_insert_chart_red_250dp" />
 
         <TextView
