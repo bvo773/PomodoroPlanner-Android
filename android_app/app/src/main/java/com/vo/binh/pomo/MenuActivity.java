@@ -3,7 +3,10 @@ package com.vo.binh.pomo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,9 +17,7 @@ import java.util.Date;
 
 public class MenuActivity extends AppCompatActivity {
     // Member Variables (Global)
-    Button mTimerButton;
-    Button mPlannerButton;
-    Button mStatisticsButoon;
+    CardView mCardView1, mCardView2, mCardView3, mCardView4;
     TextView mTodayDateText;
 
     @Override
@@ -27,11 +28,29 @@ public class MenuActivity extends AppCompatActivity {
         mTodayDateText = findViewById(R.id.text_date);
         mTodayDateText.setText(getTodayDate());
 
+        inflateCardViews(mCardView1, mCardView2, mCardView3, mCardView4);
+
+
+
     }
 
     public String getTodayDate() {
         Date date = new Date();
         String fDate = new SimpleDateFormat("MMMM dd, yyyy").format(date);
         return fDate;
+    }
+
+    private void inflateCardViews(CardView cardView1, CardView cardView2, CardView cardView3, CardView cardView4) {
+        cardView1 = findViewById(R.id.card_view1);
+        cardView2 = findViewById(R.id.card_view2);
+        cardView3 = findViewById(R.id.card_view3);
+        cardView4 = findViewById(R.id.card_view4);
+    }
+    private void slideToRightAnimation(CardView cardView1, CardView cardView2, CardView cardView3, CardView cardView4) {
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        cardView1.startAnimation(animation);
+        cardView2.startAnimation(animation);
+        cardView3.startAnimation(animation);
+        cardView4.startAnimation(animation);
     }
 }

@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -37,17 +39,31 @@ public class LoginActivity extends AppCompatActivity {
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                SignUp();
             }
         });
+
+        /* Animation */
+        slideToRightAnimation(mLogInButton, mSignUpButton);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
        // Fragment fragment = fragmentManager.findFragmentById(R.id.);
 
     }
 
-    public void LogIn() {
+    private void LogIn() {
         Intent menuActivity = new Intent(this, MenuActivity.class);
         startActivity(menuActivity);
+    }
+
+    private void SignUp() {
+        Intent signupActivity = new Intent(this, SignupActivity.class);
+        startActivity(signupActivity);
+    }
+
+    private void slideToRightAnimation(Button a, Button b) {
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        a.startAnimation(animation);
+        b.startAnimation(animation);
     }
 }
