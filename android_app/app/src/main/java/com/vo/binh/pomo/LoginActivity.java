@@ -1,6 +1,7 @@
 package com.vo.binh.pomo;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         /* Animation */
+        fadeInAnimation(mLogInImageView);
         slideToRightAnimation(mLogInButton, mSignUpButton);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -52,12 +54,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void LogIn() {
-        Intent menuActivity = new Intent(this, MenuActivity.class);
+        Intent menuActivity = new Intent(LoginActivity.this, MenuActivity.class);
         startActivity(menuActivity);
     }
 
     private void SignUp() {
-        Intent signupActivity = new Intent(this, SignupActivity.class);
+        Intent signupActivity = new Intent(LoginActivity.this, SignupActivity.class);
         startActivity(signupActivity);
     }
 
@@ -65,5 +67,10 @@ public class LoginActivity extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
         a.startAnimation(animation);
         b.startAnimation(animation);
+    }
+
+    private void fadeInAnimation(ImageView imageView) {
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        imageView.startAnimation(animation);
     }
 }
