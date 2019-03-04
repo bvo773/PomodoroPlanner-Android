@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -18,6 +19,8 @@ public class PomodoroTimerActivity extends AppCompatActivity {
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = INTERVAL25MINS_IN_MILLIS;
+    private ProgressBar mProgressBar;
+    int minuteProgress = 1500000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,8 @@ public class PomodoroTimerActivity extends AppCompatActivity {
         mCountDownTextview = findViewById(R.id.countdown_textview);
         mStartPauseButton = findViewById(R.id.start_pause_button);
         mResetButton = findViewById(R.id.reset_button);
+        mProgressBar = findViewById(R.id.ProgressBar01);
+
 
         mStartPauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,15 +52,18 @@ public class PomodoroTimerActivity extends AppCompatActivity {
             }
         });
 
+
         updateCountDownText();
     }
 
     private void startTimer() {
+
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long l) { // millisUntilFinished
                 mTimeLeftInMillis = l;
                 updateCountDownText();
+                //mProgressBar.setProgress(minuteProgress/1000);
             }
 
             @Override
@@ -92,10 +100,10 @@ public class PomodoroTimerActivity extends AppCompatActivity {
     private void updateCountDownText() {
         int minutes = (int) (mTimeLeftInMillis / 1000 / 60);
         int seconds = (int) (mTimeLeftInMillis / 1000 % 60);
+        int milliseconds = (int) (seconds  * 1000);
+        String timeLeftFortmatted = String.format(Locale.getDefault(), "%d:%02d", minutes, seconds);
 
-        String timeLeftFortmatted = String.format(Locale.getDefault(), "%20d:%20d", minutes, seconds);
-
-        //mCountDownTextview.setText(timeLeftFortmatted);
+        mCountDownTextview.setText(timeLeftFortmatted);
     }
 
 

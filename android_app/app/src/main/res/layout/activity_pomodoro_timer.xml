@@ -9,20 +9,18 @@
 
     <TextView
         android:id="@+id/countdown_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="00:00"
-        android:textAlignment="center"
 
+        android:text="25:00"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/start_pause_button"
+        android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -34,10 +32,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="144dp"
+        android:background="@color/white"
         android:text="Start"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toStartOf="@+id/reset_button"
-        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countdown_textview" />
 
@@ -46,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
+        android:background="@color/white"
         android:text="Reset"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,17 @@
 
     </FrameLayout>
 
-
+    <ProgressBar
+        android:id="@+id/ProgressBar01"
+        android:layout_width="146dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:indeterminateDrawable="@drawable/progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
