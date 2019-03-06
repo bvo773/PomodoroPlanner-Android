@@ -12,6 +12,8 @@ import java.util.Locale;
 
 
 public class PomodoroTimerActivity extends AppCompatActivity {
+    private static final String TAG = "PomodoroTimerActivity";
+
     private static final long INTERVAL25MINS_IN_MILLIS = 1500000;
     private TextView mCountDownTextview;
     private Button mStartPauseButton;
@@ -31,7 +33,7 @@ public class PomodoroTimerActivity extends AppCompatActivity {
         mCountDownTextview = findViewById(R.id.countdown_textview);
         mStartPauseButton = findViewById(R.id.start_pause_button);
         mResetButton = findViewById(R.id.reset_button);
-        mProgressBar = findViewById(R.id.ProgressBar01);
+        mProgressBar = findViewById(R.id.progressBar);
 
 
         mStartPauseButton.setOnClickListener(new View.OnClickListener() {

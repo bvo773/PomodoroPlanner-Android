@@ -9,18 +9,17 @@
 
     <TextView
         android:id="@+id/countdown_textview"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="8dp"
 
         android:text="25:00"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="80sp"
+        android:textColor="@color/white"
+        android:textSize="150sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -73,13 +72,15 @@
     </FrameLayout>
 
     <ProgressBar
-        android:id="@+id/ProgressBar01"
-        android:layout_width="146dp"
-        android:layout_height="97dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="327dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:indeterminateDrawable="@drawable/progress"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/countdown_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
