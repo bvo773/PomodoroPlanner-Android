@@ -31,6 +31,10 @@
         <activity android:name=".PomodoroTimerActivity">
 
         </activity>
+
+        <activity android:name=".PomodoroPlannerActivity">
+
+        </activity>
     </application>
 
 </manifest>

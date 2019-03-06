@@ -1,12 +1,11 @@
 package com.vo.binh.pomo;
 
 import android.os.CountDownTimer;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -52,9 +51,9 @@ public class PomodoroTimerActivity extends AppCompatActivity {
                 resetTimer();
             }
         });
-
-
         updateCountDownText();
+
+
 
     }
 
