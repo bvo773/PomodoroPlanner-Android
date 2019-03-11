@@ -7,10 +7,11 @@ public class Task {
    private Date mTaskDate;
    private boolean isDone;
 
+    public String getTaskTitle() {
+        return mTaskTitle;
+    }
 
-
-
-
-
-
+    public void setTaskTitle(String taskTitle) {
+        mTaskTitle = taskTitle;
+    }
 }
