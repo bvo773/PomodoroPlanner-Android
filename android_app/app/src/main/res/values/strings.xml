@@ -39,8 +39,14 @@
 
     <string name="date">2/13/19</string>
     <string name="quote_1">"All our dreams can come true, if we have the courage to pursue them." – Walt Disney</string>
+
+    <string name="task_title_label">Title</string>
+    <string name="task_title_hint">Enter a title for the task...</string>
+    <string name="task_notes_hint">Enter notes for the task...</string>
+
+    <string name="task_notes_label">Notes</string>
     <string name="task_solved_label">Done</string>
-    <string name="task_title_hint">Enter Task...</string>
+
 </resources>
 
 

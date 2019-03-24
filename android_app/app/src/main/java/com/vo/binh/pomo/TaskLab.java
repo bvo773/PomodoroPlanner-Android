@@ -24,7 +24,7 @@ public class TaskLab {
         for (int i = 0; i < 20; i++) {
             Task task = new Task();
             task.setTaskTitle("Task #" + i);
-            task.setDone(i%2 == 0);
+            task.setCompleted(i%2 == 0);
             mTasks.add(task);
         }
     }

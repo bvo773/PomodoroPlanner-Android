@@ -10,10 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
 public class TaskFragment extends Fragment {
-    private CheckBox mDoneCheckBox;
+    private CheckBox mCompletedCheckBox;
     private EditText mTaskTitleField;
     private Task mTask;
 
@@ -46,6 +47,13 @@ public class TaskFragment extends Fragment {
             }
         });
 
+        mCompletedCheckBox = (CheckBox) v.findViewById(R.id.task_completed);
+        mCompletedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mTask.setCompleted(isChecked);
+            }
+        });
         return v;
     }
 }

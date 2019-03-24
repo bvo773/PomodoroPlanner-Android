@@ -38,7 +38,7 @@ public class MenuActivity extends AppCompatActivity {
         mCardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent PomodoroPlannerActivity = new Intent(MenuActivity.this, TaskActivity.class);
+                Intent PomodoroPlannerActivity = new Intent(MenuActivity.this, TaskListActivity.class);
                 startActivity(PomodoroPlannerActivity);
             }
         });

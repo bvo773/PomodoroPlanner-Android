@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -17,6 +19,9 @@ public class LoginActivity extends AppCompatActivity {
     private Button mLogInButton;
     private Button mSignUpButton;
     private ImageView mLogInImageView;
+
+    private AutoCompleteTextView mEmailView;
+    private EditText mPasswordView;
 
 
     @Override
@@ -27,6 +32,10 @@ public class LoginActivity extends AppCompatActivity {
         mLogInButton = findViewById(R.id.login_button);
         mLogInImageView= findViewById(R.id.log_in_image);
         mSignUpButton = findViewById(R.id.signup_button);
+
+        mEmailView = findViewById(R.id.email);
+        mPasswordView = findViewById(R.id.password);
+
 
         Glide.with(this).load(R.drawable.pomodoro_grow).into(mLogInImageView);
 
@@ -52,6 +61,23 @@ public class LoginActivity extends AppCompatActivity {
        // Fragment fragment = fragmentManager.findFragmentById(R.id.);
 
     }
+
+    public void signInExstingUser(View v) {
+        //TODO:
+    }
+
+    public void registerNewUer(View v) {
+        Intent intent = new Intent(this, SignupActivity.class);
+        finish();
+        startActivity(intent);
+    }
+
+
+    private void attemptLogin() {
+        // TODO: Use FirebaseAutho to sign in with email and password
+    }
+
+    // TODO: Show error on screen with an alert dialog
 
     private void LogIn() {
         Intent menuActivity = new Intent(LoginActivity.this, MenuActivity.class);

@@ -12,13 +12,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
 
+        android:layout_marginBottom="32dp"
         android:text="25:00"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="150sp"
+        android:textSize="125sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,10 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="144dp"
         android:background="@color/white"
         android:text="Start"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toStartOf="@+id/reset_button"
         app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,18 +58,6 @@
         android:background="@color/colorPrimary"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="336dp" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="176dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_pause_button">
-
-    </FrameLayout>
 
     <!--android:progressDrawable="@drawable/horizontal_line"-->
 

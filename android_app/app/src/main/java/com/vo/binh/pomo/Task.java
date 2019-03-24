@@ -4,16 +4,22 @@ import java.util.Date;
 import java.util.UUID;
 
 public class Task {
-   private UUID mId;
-   private String mTaskTitle;
-   private Date mTaskDate;
+    private UUID mId;
+    private String mTaskTitle;
+    private Date mTaskDate;
+    private boolean mCompleted;
 
-    public boolean isDone() {
-        return mDone;
+    public Task() {
+        mId = UUID.randomUUID();
+        mTaskDate = new Date();
     }
 
-    public void setDone(boolean done) {
-        mDone = done;
+    public boolean isCompleted() {
+        return mCompleted;
+    }
+
+    public void setCompleted(boolean completed) {
+        mCompleted = completed;
     }
 
     private boolean mDone;
@@ -32,6 +38,10 @@ public class Task {
 
     public void setTaskTitle(String taskTitle) {
         mTaskTitle = taskTitle;
+    }
+
+    public void setTaskDate(Date date) {
+        mTaskDate = date;
     }
 
     public Date getTaskDate() {
