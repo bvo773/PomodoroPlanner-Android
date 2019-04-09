@@ -1,9 +1,11 @@
 package com.vo.binh.pomo;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ public class PomodoroTimerActivity extends AppCompatActivity {
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = INTERVAL25MINS_IN_MILLIS;
+    private CardView mGuideButton;
 
 
     @Override
@@ -32,6 +35,16 @@ public class PomodoroTimerActivity extends AppCompatActivity {
         mCountDownTextview = findViewById(R.id.countdown_textview);
         mStartPauseButton = findViewById(R.id.start_pause_button);
         mResetButton = findViewById(R.id.reset_button);
+        mGuideButton = findViewById(R.id.guide);
+
+        mGuideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(PomodoroTimerActivity.this, GuideActivity.class);
+               startActivity(intent);
+            }
+        });
+
 
 
         mStartPauseButton.setOnClickListener(new View.OnClickListener() {

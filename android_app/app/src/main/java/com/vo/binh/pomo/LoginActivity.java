@@ -1,8 +1,6 @@
 package com.vo.binh.pomo;
 
 import android.content.Intent;
-import android.media.Image;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,8 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         mLogInImageView= findViewById(R.id.log_in_image);
         mSignUpButton = findViewById(R.id.signup_button);
 
-        mEmailView = findViewById(R.id.email);
-        mPasswordView = findViewById(R.id.password);
+        mEmailView = findViewById(R.id.register_email);
+        mPasswordView = findViewById(R.id.register_password);
 
 
         Glide.with(this).load(R.drawable.pomodoro_grow).into(mLogInImageView);
@@ -57,17 +55,15 @@ public class LoginActivity extends AppCompatActivity {
         fadeInAnimation(mLogInImageView);
         slideToRightAnimation(mLogInButton, mSignUpButton);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-       // Fragment fragment = fragmentManager.findFragmentById(R.id.);
 
     }
 
-    public void signInExstingUser(View v) {
+    public void signInExistingUser(View v) {
         //TODO:
     }
 
-    public void registerNewUer(View v) {
-        Intent intent = new Intent(this, SignupActivity.class);
+    public void registerNewUser(View v) {
+        Intent intent = new Intent(this, RegisterActivity.class);
         finish();
         startActivity(intent);
     }
@@ -85,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void SignUp() {
-        Intent signupActivity = new Intent(LoginActivity.this, SignupActivity.class);
+        Intent signupActivity = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(signupActivity);
     }
 
