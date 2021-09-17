@@ -1,4 +1,4 @@
-## Project Title: Plan-t a Pomodoro (2018-2019)
+## Project Title: Pomodoro Planner (2018-2019)
 ### Author: Binh Vo 
 ### Project Advisor: Takunari Miyazaki
 ### CPSC 403 Seminar Advisor: Ewa Syta
